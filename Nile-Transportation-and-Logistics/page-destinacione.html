@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+
+<!-- page-about-us01:28-->
+<head>
+    <title>Bajramaliu SHPK | Destinacione</title>
+    <meta name="author" content="Bajramaliu SHPK">
+    <meta name="robots" content="index follow">
+    <meta name="googlebot" content="index follow">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="cargo, clean, contractor, corporate, freight, industry, localization, logistics, modern, shipment, transport, transportation, truck, trucking">
+    <meta name="description" content="Bajramaliu SHPK - rrjeti ynë i destinacioneve ndërmjet Kosovës, Greqisë, Turqisë, Bullgarisë dhe rajonit.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800%7CPoppins:300i,300,400,500,600,700,400i,500%7CDancing+Script:700%7CDancing+Script:700%7CGreat+Vibes:400%7CPoppins:400%7CDosis:800%7CRaleway:400,700,800&amp;subset=latin-ext" rel="stylesheet">
+    <!-- animate -->
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <!-- owl Carousel assets -->
+    <link href="assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="assets/css/owl.theme.css" rel="stylesheet">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- hover anmation -->
+    <link rel="stylesheet" href="assets/css/hover-min.css">
+    <!-- flag icon -->
+    <link rel="stylesheet" href="assets/css/flag-icon.min.css">
+    <!-- main style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- elegant icon -->
+    <link rel="stylesheet" href="assets/css/elegant_icon.css">
+
+    <!-- jquery library  -->
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <!-- fontawesome  -->
+    <link rel="stylesheet" href="assets/fonts/font-awesome/css/font-awesome.min.css">
+
+    <style>
+        .destination-page-title {
+            position: relative;
+            background-image:
+                linear-gradient(135deg, rgba(7, 20, 29, 0.72) 0%, rgba(7, 20, 29, 0.48) 48%, rgba(229, 57, 53, 0.30) 100%),
+                url(assets/img/photo2.png);
+            background-size: cover;
+            background-position: center 66%;
+        }
+
+        .destination-page-title:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.38) 100%);
+        }
+
+        .destination-page-title .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .destination-page-title .page-banner-text {
+            max-width: 760px;
+            margin: 16px auto 0;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.88);
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .destination-card {
+            position: relative;
+            margin-bottom: 30px;
+            min-height: 235px;
+            overflow: hidden;
+            box-shadow: 0 14px 35px rgba(0, 0, 0, 0.10);
+            background: #111;
+        }
+
+        .destination-card img {
+            width: 100%;
+            height: 235px;
+            object-fit: cover;
+            transition: transform 0.45s ease;
+        }
+
+        .destination-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .destination-card .destination-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.88) 8%, rgba(0, 0, 0, 0.18) 58%, rgba(0, 0, 0, 0.05) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 24px;
+            color: #fff;
+            transition: background 0.35s ease;
+        }
+
+        .destination-card:hover .destination-overlay {
+            background: linear-gradient(to top, rgba(229, 57, 53, 0.96) 0%, rgba(24, 24, 24, 0.78) 62%, rgba(24, 24, 24, 0.16) 100%);
+        }
+
+        .destination-card .destination-label {
+            display: inline-block;
+            align-self: flex-start;
+            margin-bottom: 14px;
+            background: rgba(229, 57, 53, 0.95);
+            color: #fff;
+            padding: 8px 14px;
+            font-weight: 600;
+            letter-spacing: 0.4px;
+        }
+
+        .destination-card h3 {
+            color: #fff;
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+
+        .destination-card .destination-summary {
+            margin-bottom: 0;
+            max-width: 90%;
+        }
+
+        .destination-card .destination-details {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(12px);
+            transition: all 0.35s ease;
+            margin-bottom: 0;
+        }
+
+        .destination-card:hover .destination-details {
+            max-height: 180px;
+            opacity: 1;
+            transform: translateY(0);
+            margin-top: 14px;
+        }
+
+        .destination-gallery {
+            position: relative;
+        }
+
+        .destination-gallery:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 30px;
+            left: 50%;
+            width: 1px;
+            background: #e53935;
+            transform: translateX(-50%);
+            pointer-events: none;
+        }
+
+        .destination-item-left {
+            padding-right: 34px;
+        }
+
+        .destination-item-right {
+            padding-left: 34px;
+        }
+
+        .destination-item:nth-child(even) {
+            margin-top: 55px;
+        }
+
+        @media (max-width: 991.98px) {
+            .destination-item-left,
+            .destination-item-right {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .destination-item:nth-child(even) {
+                margin-top: 0;
+            }
+
+            .destination-gallery:before {
+                display: none;
+            }
+        }
+
+        .destination-gallery-showcase {
+            background: #161616;
+            padding: 90px 0 95px;
+        }
+
+        .destination-gallery-intro {
+            color: #fff;
+            margin-bottom: 46px;
+            text-align: center;
+        }
+
+        .destination-gallery-intro h2 {
+            color: #fff;
+            font-size: 44px;
+            line-height: 1.08;
+            margin-bottom: 16px;
+        }
+
+        .destination-gallery-intro p {
+            color: rgba(255, 255, 255, 0.70);
+            line-height: 1.9;
+            margin: 0 auto;
+            max-width: 760px;
+        }
+
+        .destination-gallery-masonry {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+            align-items: start;
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        .destination-gallery-col {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .destination-gallery-photo {
+            overflow: hidden;
+            border-radius: 2px;
+        }
+
+        .destination-gallery-photo.tall img {
+            height: 230px;
+        }
+
+        .destination-gallery-photo.medium img {
+            height: 195px;
+        }
+
+        .destination-gallery-photo.short img {
+            height: 170px;
+        }
+
+        .destination-gallery-photo img {
+            width: 100%;
+            display: block;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 1199.98px) {
+            .destination-gallery-masonry {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .destination-gallery-showcase {
+                padding: 70px 0;
+            }
+
+            .destination-gallery-intro h2 {
+                font-size: 34px;
+            }
+
+            .destination-gallery-masonry {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <style>
+        .site-logo-lockup {
+            display: inline-flex !important;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: nowrap;
+            white-space: nowrap;
+            vertical-align: middle;
+        }
+
+        .site-logo-lockup img {
+            height: 64px;
+            width: auto;
+            display: block;
+            flex: 0 0 auto;
+            filter: brightness(0) saturate(100%) invert(36%) sepia(90%) saturate(2211%) hue-rotate(341deg) brightness(92%) contrast(95%);
+        }
+
+        .site-logo-wordmark {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            line-height: 1.05;
+            flex: 0 1 auto;
+        }
+
+        .site-logo-wordmark small {
+            font-family: 'Poppins', sans-serif;
+            font-size: 11px;
+            font-weight: 400;
+            letter-spacing: 0.2px;
+            text-transform: none;
+            margin-bottom: 4px;
+        }
+
+        .site-logo-wordmark strong {
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.15px;
+            text-transform: none;
+        }
+
+        .site-logo-wordmark-light small {
+            color: rgba(255, 255, 255, 0.72);
+        }
+
+        .site-logo-wordmark-light strong {
+            color: #ffffff;
+        }
+
+        .site-logo-wordmark-dark small {
+            color: #7f8a92;
+        }
+
+        .site-logo-wordmark-dark strong {
+            color: #07141d;
+        }
+
+        @media (max-width: 767.98px) {
+            .site-logo-lockup img {
+                height: 54px;
+            }
+
+            .site-logo-wordmark strong {
+                font-size: 13px;
+            }
+
+            .site-logo-wordmark small {
+                font-size: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="fixed-header-dark" class="header-output fixed-header">
+            <div class="header-output">
+                <div class="container header-in">
+
+                    <!-- Up Head -->
+                    <div class="up-head d-none d-lg-block">
+                        <div class="row">
+                            <div class="col-xl-8 col-lg-12">
+                                <div class="row">
+                                    <div class="col-md-4"><i class="fa fa-phone margin-right-10px"></i> +383 48 333 395</div>
+                                    <div class="col-md-4"><i class="fa fa-phone margin-right-10px"></i> +383 48 786 786</div>
+                                    <div class="col-md-4"><i class="fa fa-map-marker margin-right-10px"></i> Han i Elezit, Kosovë</div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 d-none d-xl-block">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <!--  Social -->
+                                        <ul class="social-media list-inline text-right margin-0px text-white">
+                                            <li class="list-inline-item"><a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                            <li class="list-inline-item"><a class="youtube" href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                                            <li class="list-inline-item"><a class="linkedin" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                            <li class="list-inline-item"><a class="google" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                            <li class="list-inline-item"><a class="twitter" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                            <li class="list-inline-item"><a class="rss" href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                                        </ul>
+                                        <!-- // Social -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // Up Head -->
+
+                    <div class="position-relative">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-12">
+                                <a id="logo" href="home-1.html" class="d-inline-block margin-tb-15px site-logo-lockup"><img src="assets/img/logoo1.png" alt="Bajramaliu SHPK"><span class="site-logo-wordmark site-logo-wordmark-light"><small>Transportation Co.</small><strong>BajramAliuShpk</strong></span></a>
+                                <a class="mobile-toggle padding-15px background-second-color border-radius-3" href="#"><i class="fa fa-bars"></i></a>
+                            </div>
+                            <div class="col-lg-7 col-md-12 position-inherit">
+                                <ul id="menu-main" class="nav-menu float-xl-left text-lg-center link-padding-tb-25px white-link dropdown-dark">
+                                    <li><a href="home-1.html">Kryefaqja</a></li>
+                                    <li><a href="page-about-us.html">Rreth Nesh</a></li>
+                                    <li><a href="service-single.html">Shërbime</a></li>
+                                    <li><a href="page-destinacione.html">Destinacione</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-2 col-md-12 d-none d-lg-block">
+                                <a href="page-contact-us.html" class="btn btn-sm border-radius-30 margin-tb-20px text-white background-main-color box-shadow float-right padding-lr-20px margin-left-30px d-block">
+                          Na Kontaktoni
+                        </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search  -->
+    <div id="search">
+        <button type="button" class="close">&times;</button>
+        <form class="clearfix d-block">
+            <input type="search" value="" placeholder="Kërko këtu..." />
+            <button type="submit" class="btn btn-primary">Kërko</button>
+        </form>
+    </div>
+    <!-- // Search  -->
+
+    <!-- Get A Quote  -->
+    <div class="modal contact-modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content margin-top-150px background-main-color">
+                <div class="row no-gutters">
+                    <div class="col-lg-5">
+                        <img src="assets/img/contact-img.jpg" alt="">
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="padding-30px">
+                            <h3 class="padding-bottom-15px">Na kontaktoni</h3>
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label>Emri i plotë</label>
+                                        <input type="text" class="form-control" id="inputName4" placeholder="Emri">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label>Email</label>
+                                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Adresa</label>
+                                    <input type="text" class="form-control" id="inputAddress" placeholder="Hani i Elezit, Kosovë">
+                                </div>
+                                <div class="form-group">
+                                    <label>Mesazhi</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                                <a href="page-contact-us.html" class="btn-sm btn-lg btn-block background-dark text-white text-center  text-uppercase rounded-0 padding-15px">Dërgo mesazhin</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // Get A Quote  -->
+
+
+    <div class="page-title destination-page-title">
+        <div class="container">
+            <div class="padding-tb-120px">
+                <h1>Rrjet Operativ</h1>
+                <ol class="breadcrumb">
+                    <li class="active">Destinacionet ku operojmë me besim</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="nile-about-section">
+        <div class="container">
+            <!-- Title -->
+            <div class="section-title margin-bottom-40px">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7">
+                        <div class="icon text-main-color"><i class="fa fa-truck"></i></div>
+                        <div class="h2">Destinacione</div>
+                        <div class="des">Kaloni mausin mbi secilin destinacion për të parë përshkrimin dhe mënyrën si organizojmë transportin në atë treg.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- // End Title -->
+
+            <div class="row destination-gallery justify-content-center">
+                <div class="col-lg-5 destination-item destination-item-left">
+                    <div class="destination-card">
+                        <img src="assets/images/photo1.png" alt="Kosovë">
+                        <div class="destination-overlay">
+                            <h3>Kosovë</h3>
+                            <p class="destination-details">Han i Elezit dhe gjithë Kosova mbulohen me shërbim të rregullt, dorëzim të saktë dhe koordinim të vazhdueshëm. Kjo na lejon të menaxhojmë ngarkesat shpejt, me komunikim të qartë dhe kontroll të plotë të lëvizjes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 destination-item destination-item-right">
+                    <div class="destination-card">
+                        <img src="assets/images/photo3.png" alt="Greqi">
+                        <div class="destination-overlay">
+                            <h3>Greqi</h3>
+                            <p class="destination-details">Athinë, Selanik dhe rrugët kryesore tregtare mbulohen me organizim të kujdesshëm dhe lëvizje të sigurta. Çdo dërgesë planifikohet sipas itinerarit më efikas për të ruajtur ritmin dhe afatet e dorëzimit.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 destination-item destination-item-left">
+                    <div class="destination-card">
+                        <img src="assets/images/photo4.png" alt="Turqi">
+                        <div class="destination-overlay">
+                            <h3>Turqi</h3>
+                            <p class="destination-details">Stambolli, Ankara dhe nyjet kryesore logjistike lidhen me transport të qëndrueshëm dhe planifikim efikas. Për këtë treg fokusohemi në saktësi operative, dokumentacion të qartë dhe ndjekje të vazhdueshme të ngarkesës.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 destination-item destination-item-right">
+                    <div class="destination-card">
+                        <img src="assets/images/fourth.jpg" alt="Bullgari dhe rajon">
+                        <div class="destination-overlay">
+                            <h3>Bullgari & Rajon</h3>
+                            <p class="destination-details">Sofja, Plovdivi dhe vendet fqinje mbulohen me fleksibilitet të lartë dhe ndjekje të plotë të Çdo ngarkese. Ky drejtim na mundëson të lidhim shpejt dërgesat me rrjetin rajonal dhe të mbajmë ritëm të qëndrueshëm të transportit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="text-center margin-top-35px">
+                <a href="page-contact-us.html" class="nile-bottom md">Na kontaktoni <i class="fa fa-arrow-right"></i> </a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="destination-gallery-showcase">
+        <div class="container">
+            <div class="destination-gallery-intro">
+                <h2>Galeria jonë</h2>
+                <p>Pamje nga puna jonë e përditshme në transport dhe logjistikë, me fokus te flota, lëvizja dhe organizimi profesional i Çdo ngarkese.</p>
+            </div>
+
+            <div class="destination-gallery-masonry">
+                <div class="destination-gallery-col">
+                    <div class="destination-gallery-photo tall">
+                        <img src="assets/images/trucks1.png" alt="Kamion në lëvizje">
+                    </div>
+                    <div class="destination-gallery-photo short">
+                        <img src="assets/images/photo3.png" alt="Ngarkesa të koordinuara">
+                    </div>
+                </div>
+
+                <div class="destination-gallery-col">
+                    <div class="destination-gallery-photo short">
+                        <img src="assets/images/turcks3.png" alt="Kamion ndërkombëtar">
+                    </div>
+                    <div class="destination-gallery-photo tall">
+                        <img src="assets/second.png" alt="Koordinim i ngarkesave">
+                    </div>
+                </div>
+
+                <div class="destination-gallery-col">
+                    <div class="destination-gallery-photo tall">
+                        <img src="assets/images/third.png" alt="Pamje operative">
+                    </div>
+                    <div class="destination-gallery-photo short">
+                        <img src="assets/images/photo1.png" alt="Logjistikë e plotë">
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+
+    <footer class="layout-dark">
+        <div class="container padding-tb-100px">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="about-us sm-mb-45px">
+                        <div class="logo-footer margin-bottom-35px">
+                            <a href="home-1.html" class="site-logo-lockup"><img src="assets/img/logoo1.png" alt="Bajramaliu SHPK"><span class="site-logo-wordmark site-logo-wordmark-light"><small>Transportation Co.</small><strong>BajramAliuShpk</strong></span></a>
+                        </div>
+                        <div class="text margin-bottom-35px">
+                            Bajramaliu SHPK
+                            <br> Transport profesional mallrash ndërkombëtar. Hani i Elezit, Kosovë.
+                        </div>
+                        <a href="page-destinacione.html" class="nile-bottom sm">Shih destinacionet</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="nile-widget widget_nav_menu sm-mb-45px">
+                        <h2 class="title">Shërbime</h2>
+                        <ul class="footer-menu">
+                            <li><a href="service-single.html">Transport FTL</a></li>
+                            <li><a href="service-single.html">Transport LTL</a></li>
+                            <li><a href="service-single.html">Logjistikë</a></li>
+                            <li><a href="page-destinacione.html">Greqi - Turqi</a></li>
+                            <li><a href="page-destinacione.html">Bullgari - Kosovë</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="nile-widget widget_nav_menu sm-mb-45px">
+                        <h2 class="title">Navigimi</h2>
+                        <ul class="footer-menu">
+                            <li><a href="home-1.html">Kryefaqja</a></li>
+                            <li><a href="page-about-us.html">Rreth Nesh</a></li>
+                            <li><a href="service-single.html">Shërbime</a></li>
+                            <li><a href="page-destinacione.html">Destinacione</a></li>
+                            <li><a href="page-contact-us.html">Kontakto Tani</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="nile-widget">
+                        <div class="margin-bottom-60px">
+                            <h2 class="title">Kontakti</h2>
+                            <div class="contact-info opacity-9">
+                                <div class="icon margin-top-5px"><span class="icon_pin_alt"></span></div>
+                                <div class="text">
+                                    <span class="title-in">Adresa :</span> <br>
+                                    <span class="font-weight-500 text-uppercase">Hani i Elezit, Kosovë</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="call_center">
+                            <h2 class="title">Telefon</h2>
+                            <div class="contact-info opacity-9">
+                                <div class="icon  margin-top-5px"><span class="icon_phone"></span></div>
+                                <div class="text">
+                                    <span class="title-in">Na kontaktoni :</span><br>
+                                    <span class="font-weight-500 text-uppercase">+383 48 333 395</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="copy-right">
+            <div class="container padding-tb-50px">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="copy-right-text text-lg-left text-center sm-mb-15px">© 2026 Bajramaliu SHPK. Të gjitha të drejtat të rezervuara.</div>
+                    </div>
+                    <div class="col-lg-6">
+                        <!--  Social -->
+                        <ul class="social-media list-inline text-lg-right text-center margin-0px text-white">
+                            <li class="list-inline-item"><a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li class="list-inline-item"><a class="youtube" href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                            <li class="list-inline-item"><a class="linkedin" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li class="list-inline-item"><a class="google" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                            <li class="list-inline-item"><a class="twitter" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li class="list-inline-item"><a class="rss" href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                        </ul>
+                        <!-- // Social -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/YouTubePopUp.jquery.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/imagesloaded.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+
+
+<!-- page-about-us01:28-->
+</html>
+
+
+
+
+
+
